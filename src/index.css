@@ -1,0 +1,40 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Marhey:wght@300..700&display=swap');
+
+body{
+    background-color: #3c2c56;
+    /* font-family: "Marhey", sans-serif; */
+    font-family: "Alexandria", sans-serif;
+}
+
+.textSec {
+  font-family: "Oi", serif;
+}
+#hexagon {
+    width: 100px;
+    height: 57.735px;
+    background: rgb(255, 255, 255);
+    position: relative;
+  }
+  #hexagon::before {
+    content: "";
+    position: absolute;
+    top: -28.8675px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 28.8675px solid rgb(255, 255, 255);
+  }
+  #hexagon::after {
+    content: "";
+    position: absolute;
+    bottom: -28.8675px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 28.8675px solid rgb(255, 255, 255);
+  }
