@@ -33,12 +33,12 @@ const Main = () => {
    ];
  
    return (
-     <div className="flex flex-col items-center justify-center">
+     <div className="flex flex-col items-center justify-center md:ml-0 ml-92 translate-x-10">
        {rows.map((row, rowIndex) => (
          <div
            key={rowIndex}
            className={`flex  ${
-             rowIndex === 0 ? "md:ml-0 md:-mb-9" : rowIndex === 1 ? "md:ml-40 md:-mb-9" :  rowIndex === 2 ? " md:ml-0  md:-mb-9" : rowIndex === 3 ? 'md:ml-40 md:-mb-9' : 'md:ml-0'
+             rowIndex === 0 ? "ml-0 md:-mb-9 -mb-4 " : rowIndex === 1 ? "md:ml-40 md:-mb-9 ml-21 -mb-4" :  rowIndex === 2 ? " md:ml-0  md:-mb-9 -mb-4" : rowIndex === 3 ? 'md:ml-40 md:-mb-9 ml-21 -mb-4' : 'md:ml-0'
            }`}
          >
            {row.map((letter, i) => {
@@ -51,7 +51,7 @@ const Main = () => {
                >
                  {/* الشكل السداسي */}
                  <div
-                   className="md:w-40 md:h-40 w-20 h-20 ml-1 cursor-pointer"
+                   className="md:w-40 md:h-40 w-20 h-20  ml-1 cursor-pointer"
                    style={{
                      clipPath: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
                      backgroundColor: colors[hexagonColors[index] || 0],
@@ -61,7 +61,7 @@ const Main = () => {
  
                  {/* عرض الحرف إذا كانت الخلفية بيضاء */}
                  {(hexagonColors[index] || 0) <= 1 && (
-                   <span className="absolute inset-0 flex items-center justify-center text-4xl font-bold text-black z-10 cursor-pointer">
+                   <span className="absolute inset-0 flex items-center justify-center md:text-4xl text-2xl font-bold text-black z-10 cursor-pointer">
                      {letter}
                    </span>
                  )}
