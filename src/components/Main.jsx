@@ -38,7 +38,7 @@ const Main = () => {
          <div
            key={rowIndex}
            className={`flex  ${
-             rowIndex === 0 ? "sm:ml-0 -mb-9" : rowIndex === 1 ? "ml-40 -mb-9" :  rowIndex === 2 ? " ml-0  -mb-9" : rowIndex === 3 ? 'ml-40 -mb-9' : 'ml-0'
+             rowIndex === 0 ? "md:ml-0 md:-mb-9" : rowIndex === 1 ? "md:ml-40 md:-mb-9" :  rowIndex === 2 ? " md:ml-0  md:-mb-9" : rowIndex === 3 ? 'md:ml-40 md:-mb-9' : 'md:ml-0'
            }`}
          >
            {row.map((letter, i) => {
@@ -51,7 +51,7 @@ const Main = () => {
                >
                  {/* الشكل السداسي */}
                  <div
-                   className="w-40 h-40 ml-1 cursor-pointer "
+                   className="md:w-40 md:h-40 w-20 h-20 ml-1 cursor-pointer"
                    style={{
                      clipPath: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
                      backgroundColor: colors[hexagonColors[index] || 0],
